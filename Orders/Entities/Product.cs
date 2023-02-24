@@ -1,4 +1,5 @@
-﻿namespace Orders.Entities
+﻿using System.Globalization;
+namespace Orders.Entities
 {
     internal class Product
     {
@@ -11,6 +12,11 @@
         {
             Name = name ?? throw new ArgumentNullException(nameof(name));
             Price = price;
+        }
+
+        public override string ToString()
+        {
+            return $"{Name} - R$ " + Price.ToString("F2", CultureInfo.InvariantCulture);
         }
     }
 }

@@ -30,27 +30,27 @@
         {
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.findOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.dtBirthDate = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txtEmailName = new System.Windows.Forms.TextBox();
+            this.txtClientName = new System.Windows.Forms.TextBox();
+            this.lstOrders = new System.Windows.Forms.ListBox();
+            this.cmbProducts = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
             this.btnSaveOrder = new System.Windows.Forms.Button();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.newOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.findOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -75,15 +75,60 @@
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newOrderToolStripMenuItem,
+            this.findOrderToolStripMenuItem,
+            this.closeToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // newOrderToolStripMenuItem
+            // 
+            this.newOrderToolStripMenuItem.Name = "newOrderToolStripMenuItem";
+            this.newOrderToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.newOrderToolStripMenuItem.Text = "New Order";
+            // 
+            // findOrderToolStripMenuItem
+            // 
+            this.findOrderToolStripMenuItem.Name = "findOrderToolStripMenuItem";
+            this.findOrderToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.findOrderToolStripMenuItem.Text = "Find Order";
+            // 
+            // closeToolStripMenuItem
+            // 
+            this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.closeToolStripMenuItem.Text = "Close";
+            this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Text = "Help";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.dateTimePicker1);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.dtBirthDate);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.txtEmailName);
+            this.panel1.Controls.Add(this.txtClientName);
             this.panel1.Location = new System.Drawing.Point(12, 27);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(611, 171);
@@ -129,54 +174,54 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Client Name:";
             // 
-            // dateTimePicker1
+            // dtBirthDate
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(127, 99);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(294, 23);
-            this.dateTimePicker1.TabIndex = 2;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(127, 70);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(294, 23);
-            this.textBox2.TabIndex = 1;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(127, 41);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(294, 23);
-            this.textBox1.TabIndex = 0;
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(13, 293);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(610, 79);
-            this.listBox1.TabIndex = 3;
+            this.dtBirthDate.Location = new System.Drawing.Point(127, 99);
+            this.dtBirthDate.Name = "dtBirthDate";
+            this.dtBirthDate.Size = new System.Drawing.Size(294, 23);
+            this.dtBirthDate.TabIndex = 2;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label4.Location = new System.Drawing.Point(12, 265);
+            this.label4.Location = new System.Drawing.Point(3, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 25);
             this.label4.TabIndex = 7;
             this.label4.Text = "Orders:";
             // 
-            // comboBox1
+            // txtEmailName
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(13, 229);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(449, 23);
-            this.comboBox1.TabIndex = 8;
+            this.txtEmailName.Location = new System.Drawing.Point(127, 70);
+            this.txtEmailName.Name = "txtEmailName";
+            this.txtEmailName.Size = new System.Drawing.Size(294, 23);
+            this.txtEmailName.TabIndex = 1;
+            // 
+            // txtClientName
+            // 
+            this.txtClientName.Location = new System.Drawing.Point(127, 41);
+            this.txtClientName.Name = "txtClientName";
+            this.txtClientName.Size = new System.Drawing.Size(294, 23);
+            this.txtClientName.TabIndex = 0;
+            // 
+            // lstOrders
+            // 
+            this.lstOrders.FormattingEnabled = true;
+            this.lstOrders.ItemHeight = 15;
+            this.lstOrders.Location = new System.Drawing.Point(13, 263);
+            this.lstOrders.Name = "lstOrders";
+            this.lstOrders.Size = new System.Drawing.Size(610, 109);
+            this.lstOrders.TabIndex = 3;
+            // 
+            // cmbProducts
+            // 
+            this.cmbProducts.FormattingEnabled = true;
+            this.cmbProducts.Location = new System.Drawing.Point(13, 229);
+            this.cmbProducts.Name = "cmbProducts";
+            this.cmbProducts.Size = new System.Drawing.Size(449, 23);
+            this.cmbProducts.TabIndex = 8;
             // 
             // label5
             // 
@@ -197,6 +242,7 @@
             this.btnAdd.TabIndex = 10;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnRemove
             // 
@@ -206,57 +252,16 @@
             this.btnRemove.TabIndex = 11;
             this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // btnSaveOrder
             // 
-            this.btnSaveOrder.Location = new System.Drawing.Point(228, 387);
+            this.btnSaveOrder.Location = new System.Drawing.Point(226, 381);
             this.btnSaveOrder.Name = "btnSaveOrder";
             this.btnSaveOrder.Size = new System.Drawing.Size(142, 38);
             this.btnSaveOrder.TabIndex = 12;
             this.btnSaveOrder.Text = "Save Order";
             this.btnSaveOrder.UseVisualStyleBackColor = true;
-            // 
-            // fileToolStripMenuItem
-            // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newOrderToolStripMenuItem,
-            this.findOrderToolStripMenuItem,
-            this.closeToolStripMenuItem});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.fileToolStripMenuItem.Text = "File";
-            // 
-            // helpToolStripMenuItem
-            // 
-            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutToolStripMenuItem});
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.helpToolStripMenuItem.Text = "Help";
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.aboutToolStripMenuItem.Text = "About";
-            // 
-            // newOrderToolStripMenuItem
-            // 
-            this.newOrderToolStripMenuItem.Name = "newOrderToolStripMenuItem";
-            this.newOrderToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.newOrderToolStripMenuItem.Text = "New Order";
-            // 
-            // findOrderToolStripMenuItem
-            // 
-            this.findOrderToolStripMenuItem.Name = "findOrderToolStripMenuItem";
-            this.findOrderToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.findOrderToolStripMenuItem.Text = "Find Order";
-            // 
-            // closeToolStripMenuItem
-            // 
-            this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.closeToolStripMenuItem.Text = "Close";
             // 
             // Form1
             // 
@@ -267,9 +272,8 @@
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.cmbProducts);
+            this.Controls.Add(this.lstOrders);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
@@ -295,12 +299,12 @@
         private Label label3;
         private Label label2;
         private Label label1;
-        private DateTimePicker dateTimePicker1;
-        private TextBox textBox2;
-        private TextBox textBox1;
-        private ListBox listBox1;
+        private DateTimePicker dtBirthDate;
+        private TextBox txtEmailName;
+        private TextBox txtClientName;
+        private ListBox lstOrders;
         private Label label4;
-        private ComboBox comboBox1;
+        private ComboBox cmbProducts;
         private Label label5;
         private Button btnAdd;
         private Button btnRemove;
